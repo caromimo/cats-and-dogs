@@ -1,6 +1,6 @@
-# Understanding Clouds from Satellite Images
+# Dogs versus cats
 
-This project is a learning project based on a closed Kaggle competition to classify [dogs versus cat] (https://www.kaggle.com/c/dogs-vs-cats/data) pictures () using the [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
+This project is a learning project based on a closed Kaggle competition to classify [dogs versus cat] (https://www.kaggle.com/c/dogs-vs-cats/data) pictures using the [cookiecutter data science project template](https://drivendata.github.io/cookiecutter-data-science/).
 
 ## Project Organization
 ------------
