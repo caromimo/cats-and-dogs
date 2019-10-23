@@ -12,25 +12,40 @@ library(keras) #neural network
 library(EBImage) #image processing
 ```
 
-Setting up the environment: 
+Setting up the environment and reading images: 
 ```{r}
 setwd("/home/caroline/projects/dogs-vs-cats/data/raw/train")
-```
 
-Then collecting some test data:
-```{r}
-setwd("/home/caroline/projects/dogs-vs-cats/data/raw/train/")
 pics <- c("cat.1.jpg", "cat.2.jpg", "cat.3.jpg", "cat.4.jpg", "cat.5.jpg", "cat.6.jpg", "dog.1.jpg", "dog.2.jpg", "dog.3.jpg", "dog.4.jpg", "dog.5.jpg", "dog.6.jpg")
 
 mypic <- list()
+
 for(i in 1:12) {
   mypic[[i]]<-readImage(pics[i])
 }
-
-print(mypic[[1]])
-display(mypic[[1]])
-#readImage("/home/caroline/projects/dogs-vs-cats/data/raw/train/cat.1.jpg")
-#unlist(lapply(pics, function(x) paste("/home/caroline/projects/dogs-vs-cats/data/raw/train/", x, sep="")))
 ```
 
+Explore and dispplay images
+```{r}
+print(mypic[[1]])
+display(mypic[[1]])
+summary(mypic[[1]])
+hist(mypic[[1]])
+str(mypic)
+```
+
+
+Resize all pictures to have all dimensions
+```{r}
+for (i in 1:12) {mypic[[i]] <- resize(mypic[[i]], 28, 28)}
+```
+
+Explore resized images
+```{r}
+print(mypic[[1]])
+display(mypic[[1]])
+summary(mypic[[1]])
+hist(mypic[[1]])
+str(mypic)
+```
 
